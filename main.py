@@ -148,7 +148,7 @@ while armour is None:
 while boots is None:
     boots = input('Choose the boots: (use the number next to the boots)\n')
     try:
-        boots = int(armour)
+        boots = int(boots)
         if not(0 <= boots <= 19):
             boots = None
             print('Please have the number between 0 and 19')
