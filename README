@@ -1,0 +1,60 @@
+IMPORTANT - you will need a way of running python for this
+
+
+<<<<<<<<<<<<<<>>>>>>>>>>>>>>
+How to use
+<<<<<<<<<<<<<<>>>>>>>>>>>>>>
+Go to main.py and run the code
+You will be able to choose different heroes, stones, artifacts and equipment
+After you select those it will print the stats you will normally see in game
+You will then be able to put in a specific stat and the stat will be printed
+You can also enter all to see all stats or changed to see stats that arent at base value
+If you want to change the hero/stone/artifact/equipment, run the code again
+
+<<<<<<<<<<<<<<>>>>>>>>>>>>>>
+How to add heroes
+<<<<<<<<<<<<<<>>>>>>>>>>>>>>
+1. To add new heroes go into the calculator folder then heroes.py
+2. Scroll down to where it says HERO_STATS = {...}
+3. Copy the format of the other heroes with 'hero name': {...}
+4. Inside the curly brackets put the class,
+   faction etc that is found on the 10* version of the hero
+5. Then look at the hero's passive which gives stats,
+   if there is +%hp or +%atk or +%armour add 'hp_mult': amount
+Notes: Where you add the hero in HERO_STATS doesnt matter, the order of the stats doesnt matter
+       If you are using this with my file make sure to remove any - from the name and replace it with a space
+
+<<<<<<<<<<<<<<>>>>>>>>>>>>>>
+How to add artifacts
+<<<<<<<<<<<<<<>>>>>>>>>>>>>>
+1. To add new artifacts go into the calculator folder then artifacts.py
+2. Go to where it says ARTIFACTS = {...}
+3. Copy the format of the other artifacts with 'artifact name': {...}
+4. If you want a faction bonus stat/s add 'faction (faction name)': {...}
+   with the {...} being any stats like with the rest of the artifact
+Notes: Any +atk/hp should be atk/hp: amount, any +%atk/hp should be percent atk/hp: amount
+       Where you add the artifact in ARTIFACTS doesnt matter, the order of the stats doesnt matter
+       If youre using this with my file make sure to remove any ' fro the name
+
+<<<<<<<<<<<<<<>>>>>>>>>>>>>>
+How to change the guild tech
+<<<<<<<<<<<<<<>>>>>>>>>>>>>>
+1. To change the guild tech go into the calculator folder then guild_tech.py
+2. Find the list of numbers for the class, e.g. warrior = [60, 50, 40, 30, 20, 20, 20, 20]
+3. Change the numbers as you want, the max bonuses are shown above the list
+Notes: Make sure that the list have at least 8 numbers in them
+       The max values for the numbers (in game) are [60, 50, 40, 30, 20, 20, 20, 20], (bigger numbers will add a bigger buff)
+
+<<<<<<<<<<<<<<>>>>>>>>>>>>>>
+Custom interface - assumes python knowledge
+<<<<<<<<<<<<<<>>>>>>>>>>>>>>
+If you want to change the interface code you can
+To get the hero stats you need to import calculator.stat_finder
+You can then go stats = stat_finder.get_stats(hero, artifact, stone, weapon, armour, boots, accesory)
+hero is the name of the hero, artifact is the name of the artifact,
+stone is an int of where the stone is in the STONES list - found in calculator.stones.py
+weapon/armour/boots/accesory are ints, 0 = no equipment, 17 = 6* orange,
+18 = class gear of the correct class, 19 = class gear of the wrong class
+the function will return a list of stats with it being 'stat name': amount
+
+
