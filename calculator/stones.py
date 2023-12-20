@@ -61,10 +61,11 @@ STONES = [
 
 def do_addition_stone(stats, stone_num):
     stone = STONES[stone_num]
-    print(stone)
     for i in stone:
         if i[:7] == 'percent': continue
-        stats[i] += stone.get(i)
+        elif i == 'hp': stats[i] += stone.get(i)*(1+stats.get('hp_mult')/100)
+        elif i == 'atk': stats[i] += stone.get(i)*(1+stats.get('atk_mult')/100)
+        else: stats[i] += stone.get(i)
 
 def do_stone_percents(stats, stone_num):
     stone = STONES[stone_num]
