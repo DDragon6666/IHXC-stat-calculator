@@ -185,18 +185,3 @@ while True:
             if BASE_STATS.get(stat) != stats.get(stat): print(f'{stat}: {stats.get(stat)}')
     elif stats.get(extra_printed_stat) is None: print('Not a valid stat')
     else: print(f'{extra_printed_stat}: {stats.get(extra_printed_stat)}')
-
-'''
-made by
-
-     Y&###&PY?:       !####&BYY~.                                                                   
-     ~Y@@@J?G&@@Y.    :7&@@G75#@@B^                                                                 
-      J@@!    ^&@&.    .@@#    .5@@?   ..  ...       .....        ...         .!7~       77. ^?7^   
-     .@@B      :@@!    G@@:      #@#   &@&&@&@@!  .?#@#&@@?    ~B&&&@&:    ^G@@@@@@~    G@@@&BG@@5  
-     P@@:     .B@&    ^@@5      J@@~  ^@@@J. !7: 7@@5. 5@@.  ^#@^ .#@@.  .#@&7. .@@#   Y@@B7. :@@J  
-    :@@5   .~B@@P.    #@&    ^Y@@&^   G@@.      Y@&.  Y@@Y  !@@! .&@@G  :@@5    ?@@7  ~@@?   .&@#   
-   :B@@5JG&@@#J.    .J@@#J5&@@&P^    :@@J      .@@J:Y@@@@.  G@@5&@@@@^  P@@.  .G@@7  .&@B    &@&.   
- ?&@@@&B#Y7:      .#&@@@B#G7~.       ?@&.       ?#&#5?&@Y    ~7?~!@@G   ^&@@#&@&J    ~@@^   7@@^    
-                                                                ^@@B                                
-                                                            .YB&@&?                                 
-'''
