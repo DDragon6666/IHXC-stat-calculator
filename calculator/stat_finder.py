@@ -79,7 +79,6 @@ def get_stats(hero: str, artifact: str, stone: int, weapon: int, armour: int, bo
 
     for backend_stat in BACKEND_STATS:
         del stats[backend_stat]
-        del BASE_STATS[backend_stat]
     for bool_stat in BOOL_STATS:
         stats[bool_stat] = bool(stats.get(bool_stat))
 
