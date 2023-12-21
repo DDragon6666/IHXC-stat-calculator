@@ -234,6 +234,7 @@ sorted_all_hero_stats = [hero1_stats, hero2_stats, hero3_stats, hero4_stats, her
 
 print('Command options are sort or hero(number) then a stat or for a specific hero all or changed')
 while True:
+    print()
     command = input('Command: ')
     if command[:4] == 'sort':
         stat = command[5:]
@@ -249,7 +250,7 @@ while True:
             num = int(num)
             if num < 1 or num > 6: raise ValueError
             stat = command[6:]
-            hero = all_hero_stats[num]
+            hero = all_hero_stats[num-1]
             if stat == 'all':
                 print()
                 for stat in BASE_STATS:
